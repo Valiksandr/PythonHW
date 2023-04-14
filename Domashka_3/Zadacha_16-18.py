@@ -2,7 +2,7 @@ import random
 size = int(input("Введите колличество значений: "))
 max = int(input("Введите максимальное значение: "))
 min = int(input("Введите минимальное значение: "))
-num = int(input("Че ищем, босс: "))
+num = int(input("Че ищем, босс? Только скажи: "))
 
 
 my_list = [random.randint(min, max) for _ in range(size)]

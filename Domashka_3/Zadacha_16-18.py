@@ -9,12 +9,13 @@ my_list = [random.randint(min, max) for _ in range(size)]
 count = 0
 blizkoe = my_list[0]
 print(my_list)
-for i in my_list:
-    if i == num:
+for item in my_list:
+    if item == num:
         count = count + 1
-print(f"Ваше число встретилось", count, "раз/а")
 if count == 0:
-    for i in my_list:
-        if abs(i - num) < abs(blizkoe - num):
-             blizkoe = i
-print(f"Наиболее близкое число к вашему:", blizkoe,)
+    for item in my_list:
+        if abs(blizkoe - num) > abs(item - num):
+            blizkoe = item
+    print(f"Числа", num, "тут нет! Наиболее близкое число к вашему:", blizkoe,)
+else:
+    print(f"Ваше число встретилось", count, "раз/а")

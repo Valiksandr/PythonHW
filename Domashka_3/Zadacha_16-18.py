@@ -18,4 +18,4 @@ if count == 0:
             blizkoe = item
     print(f"Числа", num, "тут нет! Наиболее близкое число к вашему:", blizkoe,)
 else:
-    print(f"Ваше число встретилось", count, "раз/а")
+    print(f"Число", num, "встретилось", count, "раз/а")

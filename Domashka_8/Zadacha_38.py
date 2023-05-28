@@ -1,21 +1,21 @@
-#     print('\nПриветствую! Вы открыли телефонный справочник Александра.')
-#     print('\nВыберите пункт меню, нажав соответствующую цифру.')
-#     print('1. Добавить новую запись.')
-#     print('2. Закрыть программу.\n')
+path = 'phonebook.txt'
 
-   
-# def add_into_file():
-#     data = open(path, 'a', encoding='UTF-8')
-#     firstname = input("Имя: ").capitalize()
-#     fathername = input("Отчество: ").capitalize()
-#     surname = input("Фамилия: ").capitalize()
-#     mobile_phone_number = input("Мобильный телефон: ")
-#     data.write(f"{surname} - {firstname} - {fathername} - {mobile_phone_number}")
-#     data.close()
+def open_main_menu():
+    print('\nПриветствую! Вы открыли телефонный справочник Александра.')
+    print('\nВыберите пункт меню, нажав соответствующую цифру.')
+    print('1. Добавить новую запись.')
+    print('2. Закрыть программу.\n')
 
-# path = 'phonebook.txt'
+def add_into_file():
+    data = open(path, 'w', encoding='UTF-8')
+    firstname = input("Имя: ").capitalize()
+    fathername = input("Отчество: ").capitalize()
+    surname = input("Фамилия: ").capitalize()
+    mobile_phone_number = input("Мобильный телефон: ")
+    data.write(f"{surname} - {firstname} - {fathername} - {mobile_phone_number}")
+    data.close()
 
-# main_menu()
+open_main_menu()
 n = int(input('Выберите пункт меню: '))
 if n == 1:
     add_into_file()
